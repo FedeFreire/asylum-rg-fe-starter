@@ -8,9 +8,13 @@ import '../../../styles/RenderLandingPage.less';
 import { Button } from 'antd';
 import { useHistory } from 'react-router-dom';
 // for the purposes of testing PageNav
-import PageNav from '../../common/PageNav';
+//import PageNav from '../../common/PageNav';
 
 ///*** NEW COMPONENTS ***
+/* 
+  It's a clean, modular approach that enhances the maintainability of the code and allows
+  for easier updates or changes to individual graph sections without affecting others.
+*/
 
 const GraphSection = ({ imgSrc, altText, description, className }) => (
   <div className={className}>
@@ -77,7 +81,7 @@ function RenderLandingPage(props) {
         >
           View the Data
         </Button>
-        {/* Added download link */}
+        {/* Added download button with functionality */}
         <a
           href="https://humanrightsfirst.org/wp-content/uploads/2022/10/COW2021001887-I589Data.csv"
           download="COW2021001887-I589Data.csv"
