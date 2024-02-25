@@ -21,15 +21,13 @@ const { background_color } = colors;
       - dispatch: provided by Redux connect, allows to send actions to the store
       - set_view: updates the state to reflect the type of graphic displayed 
       */
-function GraphWrapper({ dispatch, set_view }) {
-  const { office, view } = useParams();
-  // UseParams is a hook that allows to access the parameters of the current route, in this case, the office and view.
-
-  useEffect(() => {
-    if (!view) set_view('time-series');
-  }, [view, set_view]);
-  // UseEffect is a hook that allows to perform side effects in the component, in this case, it sets the view to time-series if it is not defined.
-
+function GraphWrapper(props) {
+  const { set_view, dispatch } = props;
+  let { office, view } = useParams();
+  if (!view) {
+    set_view('time-series');
+    view = 'time-series';
+  }
   let map_to_render;
   // map_to_render is a variable that will store the component to be rendered, depending on the view and office parameters.
 
