@@ -28,8 +28,8 @@ const App = () => {
       <Switch>
         <Route path="/" exact component={LandingPage} />
         <Route path="/graphs" component={GraphsContainer} />
-        <Route component={NotFoundPage} />
         <Route path="/profile" component={Profile} />
+        <Route component={NotFoundPage} />
       </Switch>
       <Footer
         style={{ backgroundColor: primary_accent_color, color: '#E2F0F7' }}
