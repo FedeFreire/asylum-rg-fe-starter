@@ -4,8 +4,8 @@ import { Auth0Provider } from '@auth0/auth0-react';
 
 const Auth0ProviderWithHistory = ({ children }) => {
   const history = useHistory();
-  const domain = process.env.REACT_APP_AUTH0_DOMAIN;
-  const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
+  const domain = 'dev-qurvlzph8pi372el.us.auth0.com';
+  const clientId = 'SHuiZA549CDwyFQ0H6jD8Ed0Y8g2Bwbl';
 
   const onRedirectCallback = appState => {
     history.push(appState?.returnTo || window.location.pathname);

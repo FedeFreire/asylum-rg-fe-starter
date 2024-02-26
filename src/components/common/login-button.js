@@ -1,6 +1,8 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import { Button } from '../common/Button';
+//import { Button } from '../common/Button';
+
+import Button from 'react-bootstrap/Button';
 
 const LoginButton = () => {
   const { loginWithRedirect } = useAuth0();
@@ -15,3 +17,5 @@ const LoginButton = () => {
     </Button>
   );
 };
+
+export default LoginButton;
