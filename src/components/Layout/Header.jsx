@@ -43,6 +43,7 @@ function HeaderContent() {
           </Link>
         )}
         {!isAuthenticated ? <LoginButton /> : <LogoutButton />}
+        {/* isAuthenticated checks the state, if true will show the Profile button and change the login for the logout button */}
       </Nav>
     </div>
   );
