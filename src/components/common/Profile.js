@@ -1,7 +1,7 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import { Redirect } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css'; // Make sure Bootstrap is imported
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
